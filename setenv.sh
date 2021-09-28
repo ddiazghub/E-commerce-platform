@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#In this file authentication credentials should be set as env variables.
+#In this file authentication credentials should be set as env variables. You can delete this file if using windows.
 export DB_HOST="server.com"
 export DB_USER="postgres"
 export DB_USER="user"
