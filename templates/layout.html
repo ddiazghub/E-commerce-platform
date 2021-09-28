@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>HTML TEMPLATE</title>
+        <meta name="author" content="">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="../static/style.css" rel="stylesheet">
+    </head>
+
+    <body>
+        <div>
+            <a href="/">Home</a>
+            <a href="/store">Tienda</a>
+            {% if user == None %}
+                <a href="/login">Iniciar Sesión</a>
+            {% else %}
+                {% if user["admin"] %}
+                    <a href="/admin">Administrador</a>
+                {% endif %}
+                <a href="/profile">Mi perfil</a>
+                <a href="/logout">Cerrar Sesión</a>
+            {% endif %}
+        </div>
+        {% block body %}{% endblock body %}
+        <script src="../static/script.js"></script>
+    </body>
+</html>

@@ -1,0 +1,13 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+    <form id=login action="/login" method="post">
+        <input autocomplete="off" autofocus type="text" name="email" placeholder="Email">
+        <input type="password" name="password" placeholder="Contraseña">
+        <button type="submit">Iniciar Sesión</button>
+    </form>
+    <div>
+        <p>No tienes una cuenta? </p>
+        <a href="/register">Crear cuenta</a>
+    </div>
+{% endblock body %}

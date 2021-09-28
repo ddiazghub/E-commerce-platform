@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+
+{% block body %}
+    <div>
+        {% for item in items %}
+            <form action="/item" method="get">
+                <input type="text" hidden name="id" value={{ item["id"] }}>
+                <button type="submit" style="width: 50%">
+                    <div style="width: 45%; float: left">
+                        <img style="width: 70%; float: right" src={{ item["image"] }} alt="item image">
+                    </div>
+                    <div style="width: 45%; float: left">
+                        <h1>{{ item["name"] }}</h1>
+                        <p>${{ item["price"] }}</p>
+                        <p>{{ item["available"] }} disponibles</p>
+                    </div>
+                </button>
+            </form>
+        {% endfor %}
+    </div>
+{% endblock body %}

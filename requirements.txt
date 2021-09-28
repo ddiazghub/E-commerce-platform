@@ -1,0 +1,10 @@
+fastapi
+starlette
+pydantic
+uvicorn[standard]
+jinja2
+aiofiles
+python-multipart
+psycopg2
+passlib[bcrypt]
+PyJWT

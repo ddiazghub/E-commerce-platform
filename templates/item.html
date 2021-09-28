@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+
+{% block body %}
+    <div>
+        <div style="width: 45%; float: left">
+            <img style="width: 70%; float: right" src={{ item["image"] }} alt="item image">
+        </div>
+        <div style="width: 45%; float: left">
+            <form action="/addToCart" method="post">
+                <input type="text" readonly hidden name="id" value={{ item["id"] }}>
+                <input type="text" readonly hidden name="price" value={{ item["price"] }}>
+                <h1>{{ item["name"] }}</h1>
+                <p>ID: {{ item["id"] }}</p>
+                <p>${{ item["price"] }}</p>
+                <p>{{ item["available"] }} disponibles</p>
+                <label>Cantidad: </label>
+                <input type="number" min="1" name="amount">
+                <button type="submit">Añadir al carrito</button>
+            </form>
+            <h2>Descripción: </h2>
+            <p>{{ item["description"] }}</p>
+        </div>
+    </div>
+{% endblock body %}
