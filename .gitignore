@@ -1,4 +1,3 @@
 __pycache__/
 
-setenv.ps1
-setenv.sh
+setenvs.*
