@@ -1,2 +1,4 @@
 __pycache__/
-setenv.*
+
+setenv.ps1
+setenv.sh
